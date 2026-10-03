@@ -1,0 +1,55 @@
+<div class="contenedor">
+    <div class="tarjeta">
+        <h1>Datos personales</h1>
+        <p>Ingresa tus datos para conocer tu signo zodiacal chino</p>
+
+        <div class="formulario">
+
+            <div>
+                <label>Nombre:</label>
+                <input type="text" [(ngModel)]="nombre">
+            </div>
+            <div>
+                <label>Apellido paterno:</label>
+                <input type="text" [(ngModel)]="apaterno">
+            </div>
+
+            <div>
+                <label>Apellido materno:</label>
+                <input type="text" [(ngModel)]="amaterno">
+            </div>
+
+        </div>
+
+        <h2>Fecha de nacimiento</h2>
+
+        <div>
+
+            <label>Día:</label>
+            <input type="number" [(ngModel)]="dia">
+
+            <label>Mes:</label>
+            <input type="number" [(ngModel)]="mes">
+
+            <label>Año:</label>
+            <input type="number" [(ngModel)]="anio">
+
+        </div>
+        <h2>Sexo</h2>
+        <input type="radio" name="sexo" value="masculino" [(ngModel)]="sexo">
+        Masculino
+        <input type="radio" name="sexo" value="femenino" [(ngModel)]="sexo">
+        Femenino
+        <br><br>
+
+        <button (click)="imprimir()">Imprimir</button>
+
+        <div [hidden]="!signo">
+            <h2>Hola {{nombre}} {{apaterno}} {{amaterno}}</h2>
+            <p>Tienes {{edad}} años</p>
+            <p>Tu signo zodiacal chino es:</p>
+            <h2>{{signo}}</h2>
+            <img [src]="imagen" [alt]="signo" width="100">
+        </div>
+    </div>
+</div>
