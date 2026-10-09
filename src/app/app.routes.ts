@@ -18,16 +18,22 @@ export const routes: Routes = [
                         (c)=>c.Zodiaco
                     ),
             },
+            
+        ]
+
+
+    },
+    {
+        path:'escuela',
+        children:[
             {
-                path:'listaescuela',
+                path:'lista-escuela',
                 loadComponent:()=>
                     import('./escuela/lista-escuela/lista-escuela').then(
                         (c)=>c.ListaEscuela
                     ),
             },
         ]
-
-
     },
 
     { path:'', redirectTo: 'admin', pathMatch:'full' }, 
