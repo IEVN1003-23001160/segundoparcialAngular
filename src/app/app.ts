@@ -6,7 +6,7 @@ import { Zodiaco } from './formulario/zodiaco/zodiaco';
 import { Navbar } from './navbar/navbar';
 import { Distancia } from './formulario/distancia/distancia'; 
 import { ListaEscuela } from './escuela/lista-escuela/lista-escuela';
-
+import { Cinepolis } from './escuela/cinepolis/cinepolis'; 
 
 @Component({
   imports: [RouterOutlet, Navbar, Distancia, ListaEscuela],
