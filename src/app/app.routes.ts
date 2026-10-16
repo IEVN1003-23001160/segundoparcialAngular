@@ -47,6 +47,18 @@ export const routes: Routes = [
             },
         ]
     },
+    {
+        path:'escuela',
+        children:[
+            {
+                path:'ventas',
+                loadComponent:()=>
+                    import('./escuela/ventas/ventas').then(
+                        (c)=>c.Ventas
+                    ),
+            },
+        ]
+    },
 
     { path:'', redirectTo: 'admin', pathMatch:'full' }, 
     { path: '**', redirectTo: 'admin' },
