@@ -1,0 +1,125 @@
+
+<div class="min-h-screen bg-gray-50 p-6">
+
+  <div class="max-w-2xl mx-auto bg-white rounded-lg shadow-md">
+
+    <div class="p-6 border-b border-gray-200">
+
+      <h1 class="text-2xl font-bold text-gray-800">
+        Registrar alumno
+      </h1>
+
+      <p class="text-sm text-gray-500 mt-1">
+        Ingresa los datos del nuevo alumno
+      </p>
+
+    </div>
+
+    <form (ngSubmit)="guardarAlumno()" class="p-6">
+
+      <div class="mb-5">
+
+        <label class="block mb-2 text-sm font-medium text-gray-900">
+          Matrícula
+        </label>
+
+        <input
+          type="number"
+          name="matricula"
+          [(ngModel)]="alumno.matricula"
+          required
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5"
+          placeholder="Ingrese matrícula">
+
+      </div>
+
+      <div class="mb-5">
+
+        <label class="block mb-2 text-sm font-medium text-gray-900">
+          Nombre
+        </label>
+
+        <input
+          type="text"
+          name="nombre"
+          [(ngModel)]="alumno.nombre"
+          required
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5"
+          placeholder="Ingrese nombre">
+
+      </div>
+
+      <div class="mb-5">
+
+        <label class="block mb-2 text-sm font-medium text-gray-900">
+          Apellido paterno
+        </label>
+
+        <input
+          type="text"
+          name="apaterno"
+          [(ngModel)]="alumno.apaterno"
+          required
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5"
+          placeholder="Ingrese apellido paterno">
+
+      </div>
+
+      <div class="mb-5">
+
+        <label class="block mb-2 text-sm font-medium text-gray-900">
+          Apellido materno
+        </label>
+
+        <input
+          type="text"
+          name="amaterno"
+          [(ngModel)]="alumno.amaterno"
+          required
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5"
+          placeholder="Ingrese apellido materno">
+
+      </div>
+
+      <div class="mb-6">
+
+        <label class="block mb-2 text-sm font-medium text-gray-900">
+          Correo electrónico
+        </label>
+
+        <input
+          type="email"
+          name="correo"
+          [(ngModel)]="alumno.correo"
+          required
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5"
+          placeholder="Ingrese correo electrónico">
+
+      </div>
+
+      <div class="flex gap-3">
+
+        <button
+          type="submit"
+          class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5">
+
+          Guardar alumno
+
+        </button>
+
+        <button
+          type="button"
+          (click)="router.navigate(['/utl/alumnos'])"
+          class="text-white bg-gray-600 hover:bg-gray-700 font-medium rounded-lg text-sm px-5 py-2.5">
+
+          Cancelar
+
+        </button>
+
+      </div>
+
+    </form>
+
+  </div>
+
+</div>

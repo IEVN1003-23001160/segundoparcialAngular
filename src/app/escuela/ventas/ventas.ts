@@ -7,7 +7,7 @@ import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angul
   selector: 'app-ventas',
   imports: [CommonModule, FormsModule, ReactiveFormsModule],
   templateUrl: './ventas.html',
-  styleUrl: './ventas.css'
+  
 })
 export class Ventas {
 
